@@ -25,8 +25,8 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin([
       {
-        from: './src/static/',
-        to: './static/',
+        from: './src/assets/',
+        to: './assets/',
       },
     ]),
     ...htmlPlugins
