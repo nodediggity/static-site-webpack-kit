@@ -1,0 +1,34 @@
+{
+  "name": "static-site-webpack-kit",
+  "version": "1.0.0",
+  "description": "static-site-webpack-kit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodediggity/static-site-webpack-kit.git"
+  },
+  "author": "Gordon Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodediggity/static-site-webpack-kit/issues"
+  },
+  "homepage": "https://github.com/nodediggity/static-site-webpack-kit#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
