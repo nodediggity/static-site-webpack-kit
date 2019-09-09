@@ -1,5 +1,6 @@
 const glob = require('glob');
-const path = require('path');
+const path = require('path')
+const { output, root } = require('./common-paths');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
@@ -13,8 +14,9 @@ module.exports = {
   },
   entry: ['./src/js/app.js', './src/scss/main.scss'],
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'app.bundle.js'
+    path: output,
+    filename: 'app.[contenthash:8].js',
+    chunkFilename: '[id].[contenthash:8].js',
   },
   module: {
     rules: [

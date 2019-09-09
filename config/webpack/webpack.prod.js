@@ -1,15 +1,17 @@
+const cssnano = require('cssnano');
 const merge = require('webpack-merge');
 
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const common = require('./webpack.config');
 
 module.exports = merge(common, {
   mode: 'production',
+  devtool: 'none',
   optimization: {
     minimize: true,
+    splitChunks: { cacheGroups: { vendor: { chunks: 'initial', test: 'vendor', name: 'vendor', enforce: true } } }
   },
   module: {
     rules: [
@@ -23,10 +25,9 @@ module.exports = merge(common, {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css',
+      filename: '[name].[contenthash:8].css',
+      chunkFilename: '[id].[contenthash:8].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
