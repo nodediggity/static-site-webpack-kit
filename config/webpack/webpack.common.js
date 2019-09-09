@@ -15,8 +15,8 @@ module.exports = {
   entry: ['./src/js/app.js', './src/scss/main.scss'],
   output: {
     path: output,
-    filename: 'app.[contenthash:8].js',
-    chunkFilename: '[id].[contenthash:8].js',
+    filename: 'app.[hash:8].js',
+    chunkFilename: '[id].[hash:8].js',
   },
   module: {
     rules: [

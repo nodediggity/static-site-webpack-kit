@@ -4,9 +4,9 @@
   "description": "static-site-webpack-kit",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config config/webpack/webpack.dev.js",
+    "dev": "cross-env NODE_ENV=dev webpack-dev-server --env.env=dev",
     "prebuild": "npm run clean",
-    "build": "webpack --config config/webpack/webpack.prod.js",
+    "build": "cross-env NODE_ENV=production webpack -p --env.env=prod",
     "prestart": "npm run build ",
     "start": "http-server ./dist -o",
     "clean": "rimraf dist"
@@ -28,8 +28,10 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
+    "chalk": "^2.4.2",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.4",
+    "cross-env": "^5.2.1",
     "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
     "glob": "^7.1.4",
