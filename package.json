@@ -2,7 +2,7 @@
   "name": "static-site-webpack-kit",
   "version": "1.0.0",
   "description": "static-site-webpack-kit",
-  "main": "index.js",
+  "main": "dist",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev webpack-dev-server --env.env=dev",
     "prebuild": "npm run clean",
